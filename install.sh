@@ -38,3 +38,9 @@ enable_service q-meta
 enable_plugin barbican https://review.openstack.org/openstack/barbican" > devstack/localrc
 
 chown -R vagrant:vagrant devstack
+
+echo "source ~/devstack/openrc admin
+export OS_IDENTITY_API_VERSION=3
+export OS_AUTH_URL=http://localhost:5000/v3/
+export OS_USER_DOMAIN_NAME=default
+export OS_PROJECT_DOMAIN_NAME=default" > identityv3rc
